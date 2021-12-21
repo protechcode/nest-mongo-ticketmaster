@@ -9,7 +9,11 @@ import { CreateUserDTO } from "./dto/user.dto";
 @Injectable()
 export class UserService {
 
+    /* private users: User[] = []; */
+    
+
     constructor(@InjectModel('User') private readonly UserModel: Model<User>) {}
+
 
     // Get all Users
     async getUsers(): Promise<User[]> {
@@ -30,7 +34,7 @@ export class UserService {
     }
 
     // Delete User
-    async deleteUser(UserID: string): Promise<any> {
+    async deleteUser(UserID: string): Promise<User> {
         const deletedUser = await this.UserModel.findOneAndDelete(UserID);
         return deletedUser;
     }
@@ -41,5 +45,8 @@ export class UserService {
                             .findByIdAndUpdate(UserID, createUserDTO, {new: true});
         return updatedUser;
     }
-
+    async getUserByEmail(email: string) {
+        const User = await this.UserModel.find({'email.$': email});
+        return User['email'];
+    }
 }
