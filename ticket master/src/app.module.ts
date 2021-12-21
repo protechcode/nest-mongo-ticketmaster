@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { MongooseModule } from "@nestjs/mongoose";
 import { ProductModule } from './product/product.module';
 import { UserModule } from './user/user.module'
+import { EventoModule } from './eventos/evento.module';
 /* import { AuthModule } from './auth/auth.module';
  */
 
@@ -13,7 +14,8 @@ import { UserModule } from './user/user.module'
       useNewUrlParser: true
     }),
     ProductModule,
-    UserModule, 
+    UserModule,
+    EventoModule 
     /* AuthModule */
  
     

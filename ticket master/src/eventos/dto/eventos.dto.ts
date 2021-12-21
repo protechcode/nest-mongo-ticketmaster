@@ -1,11 +1,7 @@
-import { Document } from "mongoose";
-
-export interface Product extends Document {
+export class CreateEventosDTO {
     readonly name: string;
     readonly description: string;
     readonly imageURL: string;
     readonly price: number;
-    readonly category: string;
-    readonly quantity: number;
     readonly createdAt: Date;
 }
