@@ -1,8 +1,7 @@
-export class CreateproductDTO {
+export class CreateProductDTO {
     readonly name: string;
     readonly description: string;
-    readonly mageURL: string;
-    readonly price: string;
-    readonly createdAt: string;
-
+    readonly imageURL: string;
+    readonly price: number;
+    readonly createdAt: Date;
 }
