@@ -38,7 +38,7 @@ export class EventoService {
     // Put a single event
     async updateEvento(eventoID: string, createEventosDTO: CreateEventosDTO): Promise<Eventos> {
         const updatedEvento = await this.eventoModel
-                            .findByIdAndUpdate(eventoID, createEventosDTO, {new: true});
+                            .findOneAndUpdate(eventoID, createEventosDTO, {new: true});
         return updatedEvento;
     }
 
