@@ -120,7 +120,7 @@ h2 {
   opacity: .9
 }
 
-.navbar-right li a {
+.navbar-right li a{
   padding: 35px 21px;
   font-size: 22px;
   color: #fff;
@@ -254,7 +254,7 @@ h2 {
 *******Explore CSS******
 **************************/
 
-#explore {
+/* #explore {
   background-color: #C34C39;
   background-image: url("../images/event-bg.jpg");
   background-position: center bottom;
@@ -263,7 +263,7 @@ h2 {
   position: relative;
   overflow: hidden;
   padding: 130px 0 100px;
-}
+} */
 
 .watch {
   position: absolute;
@@ -719,7 +719,7 @@ h2 {
 
 #contact-section .btn-primary {
   background-color: #373737;
-  color: #f7ab24;
+  color: #f7ab24; 
   border: none;
   font-size: 24px;
   padding: 6px 42px;

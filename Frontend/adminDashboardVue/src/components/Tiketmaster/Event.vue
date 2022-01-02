@@ -1,6 +1,6 @@
 <template>
   <div id="event">
-		<<section id="event">
+		<section id="event">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-9">

@@ -29,11 +29,11 @@ export class EventoService {
         return newEvento.save();
     }
 
-    // Delete Evento
-    async deleteEvento(eventoID: string): Promise<Eventos> {
-        const deletedEventos = await this.eventoModel.findOneAndDelete(eventoID);
-        return deletedEventos;
-    }
+   // Delete Evento
+ async deleteEvento(eventoID: string): Promise<Eventos> {
+    const deletedEventos = await this.eventoModel.findOneAndDelete({ _id: eventoID});
+    return deletedEventos;
+}
 
     // Put a single event
     async updateEvento(eventoID: string, createEventosDTO: CreateEventosDTO): Promise<Eventos> {

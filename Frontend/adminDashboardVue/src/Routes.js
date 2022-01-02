@@ -3,7 +3,7 @@ import Router from 'vue-router';
 
 import Layout from '@/components/Layout/Layout';
 import Login from '@/pages/Login/Login';
-
+import UserLogin from '@/pages/Login/UserLogin'
 // Core import ErrorPage from '@/pages/Error/Error';
 import Eventos from '@/pages/Eventos/Eventos';
 import AddNewEvent from './pages/Eventos/AddNewEvent.vue';
@@ -25,7 +25,8 @@ import ChartsPage from '@/pages/Charts/Charts';
 import NotificationsPage from '@/pages/Notifications/Notifications';
 
 // Users
-import UserProfile from '@/pages/User/UserProfile.vue';
+import CRUDUser from './pages/User/CRUDUser.vue';
+import UserProfile from './components/Tiketmaster/UserProfile.vue'
 
 
 //Register
@@ -34,6 +35,9 @@ import EditEvent from './pages/Eventos/EditEvent.vue'
 
 //Tiketmaster Home in vue
 import Home from './components/Tiketmaster/Home.vue';
+import ApiCall from './components/Tiketmaster/ApiCall.vue';
+
+
 
 
 
@@ -46,13 +50,30 @@ export default new Router({
   mode: 'history',
   routes: [
     {
+      path: '/profile',
+      name: 'Profile',
+      component: UserProfile,
+
+    }, 
+    {
+      path: '/api',
+      name: 'ApiCall',
+      component: ApiCall,
+
+    }, 
+    {
       path: '/ticket',
       name: 'Home',
       component: Home,
 
     },  
     {
-      path: '/login',
+      path: '/userlogin',
+      name: 'UserLogin',
+      component: UserLogin,
+    },
+    {
+      path: '/adminlogin',
       name: 'Login',
       component: Login,
     },
@@ -72,9 +93,9 @@ export default new Router({
       component: Eventos,
     },
     {
-      path: '/userprofile',
-      name: 'UserProfile',
-      component: UserProfile
+      path: '/user',
+      name: 'CRUDUser',
+      component:CRUDUser
     },
 
     /* { 

@@ -4,7 +4,7 @@
     <b-row>
       <b-col md="6" xl="3" sm="6" xs="12">
         <div class="pb-xlg h-100">
-          <Widget class="h-100 mb-0" title="Visits Today" close>
+          <Widget class="h-100 mb-0" title="Users Today" close>
             <div class="d-flex justify-content-between align-items-center mb-lg">
               <h2>4,332</h2>
               <i class="la la-arrow-right text-primary la-lg rotate-315" />

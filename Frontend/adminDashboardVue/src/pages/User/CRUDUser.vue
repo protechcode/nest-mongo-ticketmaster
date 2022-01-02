@@ -139,7 +139,7 @@
 <script>
 import axios from 'axios';
 export default {
-  name: 'AddNewUser',
+  name: 'CRUDUser',
   data() {
     return {
         name: '',
